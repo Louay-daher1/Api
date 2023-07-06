@@ -2,6 +2,7 @@ const express = require('express')
 var bodyParser = require('body-parser');
 const cors=require('cors');
 const xlsx = require('xlsx');
+const PORT=process.env.PORT ||4321;
 
 
 const app = express()
@@ -20,4 +21,4 @@ app.get('/louay', function (req, res) {
     res.send(Data);
   })
 
-app.listen(3000);
+app.listen(PORT);
